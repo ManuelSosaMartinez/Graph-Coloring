@@ -1,7 +1,13 @@
 import React, { useRef, useState } from "react";
 import FixedGraph from "./components/FixedGraph";
+import UploadGraph from "./components/UploadGraph";
 
 function App() {
-  return <FixedGraph />;
+  return (
+    <div>
+      <FixedGraph />
+      <UploadGraph />
+    </div>
+  );
 }
 export default App;
