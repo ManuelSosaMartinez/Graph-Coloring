@@ -3,7 +3,7 @@ import { useDropzone } from "react-dropzone";
 
 function UploadGraph(props) {
   const { acceptedFiles, getRootProps, getInputProps } = useDropzone();
-  const [filename, setFilename] = useState("");
+  const [filedata, setFiledata] = useState({ color: 0, numCCs: 0 });
 
   const files = acceptedFiles.map((file) => (
     <li key={file.path}>
@@ -29,7 +29,7 @@ function UploadGraph(props) {
             alert("Unknown Error");
           }
         } else {
-          setFilename(responseData.filename);
+          setFiledata(responseData);
         }
       })
       .catch(() => {
@@ -49,7 +49,8 @@ function UploadGraph(props) {
       </aside>
       <div>
         <button onClick={() => sendFiles()}>Send Files</button>
-        <h1>Current Filename : {filename}</h1>
+        <h1>Graph color : {filedata.color}</h1>
+        <h1>Number of Convex Components : {filedata.numCCs}</h1>
       </div>
     </section>
   );

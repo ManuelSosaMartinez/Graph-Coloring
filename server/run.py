@@ -1,4 +1,5 @@
-from subprocess import call
+import subprocess
+import json
 from fastapi import FastAPI, File, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
 
@@ -18,4 +19,7 @@ app.add_middleware(
 
 @app.post("/graph/analize")
 async def analize(file: UploadFile = File(...)):
-    return {"filename": file.filename}
+
+    out = eval(subprocess.check_output(
+        "./test", stdin=file.file))
+    return out
