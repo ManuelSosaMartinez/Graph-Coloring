@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { useDropzone } from "react-dropzone";
+import CustomGraph from "./CustomGraph";
 
 function UploadGraph(props) {
   const { acceptedFiles, getRootProps, getInputProps } = useDropzone();
-  const [filedata, setFiledata] = useState({ color: 0, numCCs: 0 });
+  const [graphs, setGraphs] = useState([]);
 
   const files = acceptedFiles.map((file) => (
     <li key={file.path}>
@@ -29,7 +30,7 @@ function UploadGraph(props) {
             alert("Unknown Error");
           }
         } else {
-          setFiledata(responseData);
+          setGraphs((graphs) => [...graphs, responseData]);
         }
       })
       .catch(() => {
@@ -49,8 +50,18 @@ function UploadGraph(props) {
       </aside>
       <div>
         <button onClick={() => sendFiles()}>Send Files</button>
-        <h1>Graph color : {filedata.color}</h1>
-        <h1>Number of Convex Components : {filedata.numCCs}</h1>
+      </div>
+      <div>
+        <h1>Ther are {graphs.length} Graphs</h1>
+        <div>
+          {graphs.map((graph) => (
+            <div>
+              <h1>Graph color : {graph.color}</h1>
+              <h1>Number of Convex Components : {graph.numCCs}</h1>
+              <CustomGraph graphData={graph} />;
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

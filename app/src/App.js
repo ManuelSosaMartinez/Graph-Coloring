@@ -5,8 +5,8 @@ import UploadGraph from "./components/UploadGraph";
 function App() {
   return (
     <div>
-      <FixedGraph />
       <UploadGraph />
+      {/* <FixedGraph /> */}
     </div>
   );
 }

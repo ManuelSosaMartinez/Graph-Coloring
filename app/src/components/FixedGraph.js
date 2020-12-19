@@ -5,7 +5,7 @@ function FixedGraph() {
   //Hardcoded example
   const [graph, setGraph] = useState({
     nodes: [
-      { id: 1, label: "Node 1", title: "node 1 tootip text" },
+      { id: 1, label: "Node 1", color: "red" },
       { id: 2, label: "Node 2", title: "node 2 tootip text" },
       { id: 3, label: "Node 3", title: "node 3 tootip text" },
       { id: 4, label: "Node 4", title: "node 4 tootip text" },
@@ -14,6 +14,7 @@ function FixedGraph() {
     edges: [
       { from: 1, to: 2 },
       { from: 1, to: 3 },
+      { from: 3, to: 1 },
       { from: 2, to: 4 },
       { from: 2, to: 5 },
     ],
