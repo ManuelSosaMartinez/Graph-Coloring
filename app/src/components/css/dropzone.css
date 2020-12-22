@@ -1,0 +1,20 @@
+.dropzone {
+  background: #466273;
+  color: #b78c38;
+  font-family: "Lexia";
+  padding: 40px;
+  width: 40%;
+  margin-left: 20%;
+  border-radius: 5px;
+  border-width: 3px;
+  border-style: solid;
+  border-color: #b78c38;
+  background-clip: padding-box;
+}
+
+/*  Hex 	    RGB
+	#253759 	(37,55,89)
+	#466273 	(70,98,115)
+	#b0babf 	(176,186,191)
+	#c0d9d9 	(192,217,217)
+	#b78c38 	(183,140,56) */

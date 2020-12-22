@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useDropzone } from "react-dropzone";
 import CustomGraph from "./CustomGraph";
+import "./css/dropzone.css";
 
 function UploadGraph(props) {
   const { acceptedFiles, getRootProps, getInputProps } = useDropzone();
@@ -40,28 +41,28 @@ function UploadGraph(props) {
 
   return (
     <section className="container">
-      <div {...getRootProps({ className: "dropzone" })}>
+      <div {...getRootProps({ className: "dropzone" })} className="dropzone">
         <input {...getInputProps()} />
         <p>Drag 'n' drop some files here, or click to select files</p>
-      </div>
-      <aside>
-        <h4>Files</h4>
-        <ul>{files}</ul>
-      </aside>
-      <div>
-        <button onClick={() => sendFiles()}>Send Files</button>
+        <aside>
+          <h4>Files</h4>
+          <ul>{files}</ul>
+        </aside>
       </div>
       <div>
-        <h1>Ther are {graphs.length} Graphs</h1>
-        <div>
+        <button onClick={() => sendFiles()}>Send Graph</button>
+      </div>
+      <div>
+        <ul>
           {graphs.map((graph) => (
-            <div>
+            <li>
               <h1>Graph color : {graph.color}</h1>
               <h1>Number of Convex Components : {graph.numCCs}</h1>
-              <CustomGraph graphData={graph} />;
-            </div>
+              <h1>Color List</h1>
+              <CustomGraph graphData={graph} />
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
     </section>
   );

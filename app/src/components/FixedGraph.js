@@ -46,7 +46,21 @@ function FixedGraph() {
   };
   return (
     <div>
-      <Graph graph={graph} options={options} events={events} />
+      <Graph
+        graph={graph}
+        options={options}
+        events={events}
+        style={{
+          background: "#c0d9d9",
+          marginLeft: "15%",
+          width: "70%",
+          borderRadius: "0px",
+          borderWidth: "3px",
+          borderStyle: "solid",
+          borderColor: "#253759",
+          backgroundClip: "padding-box",
+        }}
+      />
     </div>
   );
 }

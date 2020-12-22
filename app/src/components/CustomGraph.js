@@ -19,11 +19,16 @@ function CustomGraph({ graphData }) {
         damping: 0.9,
       },
     },
+    interaction: { hover: true },
     height: "500px",
   };
   const events = {
     select: function (event) {
       var { nodes, edges } = event;
+    },
+    hoverNode: function (event) {
+      var node = event.node;
+      console.log(graphData.nodes.find((elem) => elem.id === node).color);
     },
   };
   return (
@@ -32,6 +37,16 @@ function CustomGraph({ graphData }) {
         graph={{ nodes: graphData.nodes, edges: graphData.edges }}
         options={options}
         events={events}
+        style={{
+          background: "#c0d9d9",
+          marginLeft: "15%",
+          width: "70%",
+          borderRadius: "0px",
+          borderWidth: "3px",
+          borderStyle: "solid",
+          borderColor: "#253759",
+          backgroundClip: "padding-box",
+        }}
       />
     </div>
   );
