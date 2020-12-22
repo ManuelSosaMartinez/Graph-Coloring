@@ -1,15 +1,32 @@
 .dropzone {
-  background: #466273;
-  color: #b78c38;
-  font-family: "Lexia";
-  padding: 40px;
-  width: 40%;
-  margin-left: 20%;
+  background: #cfdae5;
+  color: #253759;
+  padding: 5vmin;
+  width: 40vw;
+  text-align: center;
+  margin-left: 22vw;
+  margin-right: 22vw;
+  margin-bottom: 5vh;
   border-radius: 5px;
   border-width: 3px;
-  border-style: solid;
+  border-style: dashed;
   border-color: #b78c38;
-  background-clip: padding-box;
+  font-size: 4vmin;
+}
+
+.graphList {
+  list-style-type: none;
+  align-items: center;
+}
+
+.graphList .graph {
+  width: 80vw;
+  border-radius: 5px;
+  border-color: #b78c38;
+  border-style: solid;
+  border-width: 3px;
+  padding: 3vmin;
+  margin-bottom: 3vmin;
 }
 
 /*  Hex 	    RGB

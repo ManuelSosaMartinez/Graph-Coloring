@@ -21,5 +21,5 @@ app.add_middleware(
 async def analize(file: UploadFile = File(...)):
 
     out = eval(subprocess.check_output(
-        "./test", stdin=file.file))
+        "./painter", stdin=file.file))
     return out

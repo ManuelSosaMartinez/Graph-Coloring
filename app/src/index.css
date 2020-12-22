@@ -1,0 +1,9 @@
+@font-face {
+  font-family: "OpenSans-Regular";
+  src: url("./fonts/OpenSans-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,700;1,400&display=swap");

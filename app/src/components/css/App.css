@@ -1,0 +1,44 @@
+.page {
+  margin: auto;
+  width: 90vw;
+  min-height: 90vh;
+  border-radius: 4px;
+  font-family: "Lato", sans-serif;
+}
+a {
+  color: #b78c38;
+  text-decoration: solid;
+}
+
+.text {
+  font-size: calc(13px + 3vw);
+  text-align: center;
+  padding: 1vw;
+  color: #253759;
+}
+
+.btns {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+.page button {
+  margin-left: 30vw;
+  margin-right: 30vw;
+}
+
+.page .btns button {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.page button,
+.page .btns button {
+  padding: 3vmin;
+  width: 30vw;
+  border-radius: 10px;
+  border-style: unset;
+  background-color: #466273;
+  color: #c0d9d9;
+  font-size: 3vw;
+}
