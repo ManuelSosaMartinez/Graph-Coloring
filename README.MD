@@ -70,6 +70,3 @@ There are some example files listed on the page. Still, in the `examples` direct
 - Add the same tool via Vis
 - Add contact info
 - Work on server responses feedback
-
-# License
-Distributed under the MIT License.
